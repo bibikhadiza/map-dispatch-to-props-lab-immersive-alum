@@ -4,6 +4,7 @@ import App from './App';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import manageRestaurants from './reducers/manageRestaurants';
+import { ConnectedRestaurantInput } from './components/RestaurantInput';
 
 // we wrap store in a function for testing purposes
 export const configureStore = () => {
@@ -14,7 +15,7 @@ const store = configureStore();
 
 ReactDOM.render(
   <Provider store={store}>
-    <App store={store}/>
+    <ConnectedRestaurantInput />
   </Provider>,
   document.getElementById('root')
 );
